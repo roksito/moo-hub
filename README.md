@@ -18,23 +18,23 @@ local hea = hie:CreateSector("Mics","left")
 he:AddDropdown("select boss",{"1", "2", "3", "4", "5", "6","7","8", "9","10"},false,function(choice)
 local farm = choise
     end)
-    hea:AddToggle("trade scam[fe/nofe?]",false,function(state)
+hea:AddToggle("trade scam?",false,function(state)
 getgenv().tradescam = state
 while getgenv().tradescam do
 wait(0.05)
    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
-       if v.Name ~= game:GetService("Players").LocalPlayer.Name and 
-       
-      
-local args = {
+       if v.Name ~= game:GetService("Players").LocalPlayer.Name then
+
+            local args = {
     [1] = v,
     [2] = {},
     [3] = 0,
-    [4] = true
+    [4] = false
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("ModuleScript"):WaitForChild("Trading_System"):WaitForChild("TradingStateing"):FireServer(unpack(args))
 
+         
       end
    end
 
