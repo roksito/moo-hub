@@ -2,6 +2,7 @@
 local function press(a)
     game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
 end
+-- test
 _G.autofarm = false;
 _G.stats = false;
 _G.trade = false;
