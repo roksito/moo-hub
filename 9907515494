@@ -1,0 +1,65 @@
+
+local function press(a)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
+end
+-- test
+_G.autofarms = false;
+getgenv().Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RTrade/Voidz/main/API/Networks/swordhook-network.lua"))() --you can go into the github link and copy all of it and modify it for yourself.
+getgenv().Window = getgenv().Library:CreateWindow('Palm Slap Friends Simulator', Vector2.new(550, 627), Enum.KeyCode.LeftShift) 
+
+local Test = Window:CreateTab("main")
+local Test2 = Test:CreateSector("farm tab","left")
+
+Test2:AddToggle("autofarm",false,function(state)
+getgenv().autofarms = state
+while getgenv().autofarms do
+wait(0.05)
+local uwu = game.Players.LocalPlayer.Character
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.AppleObby.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.Conveyor.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.Game10.Position)
+wait(0.05)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "moo-hub",
+	Text = "Bypass ac pls wait..",
+})
+wait(5)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.Game25.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.Game50.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.GlassBridge.Position)
+wait(0.05)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "moo-hub",
+	Text = "bypass ac pls wait...",
+})
+wait(5)
+
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.LongJump.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.PisaTower.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.RopeWorld.Position)
+wait(2)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.SpiderWeb.Position)
+wait(0.05)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "moo-hub",
+	Text = "Bypass ac pls wait..",
+})
+wait(5)
+uwu.HumanoidRootPart.CFrame = CFrame.new(workspace.ying.Ying.Toilet.Position)
+wait(30)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "moo-hub",
+	Text = "Bypass ac pls wait..",
+})
+end
+end)
+
+Test2:AddButton("copy discord",function()
+setclipboard("https://discord.gg/sDJyW37VYv")
+end)
