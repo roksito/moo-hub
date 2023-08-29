@@ -1,0 +1,49 @@
+
+local function press(a)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
+end
+-- test
+_G.autofarme = false;
+_G.training = false;
+getgenv().Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RTrade/Voidz/main/API/Networks/swordhook-network.lua"))() --you can go into the github link and copy all of it and modify it for yourself.
+getgenv().Window = getgenv().Library:CreateWindow('Palm Slap Friends Simulator', Vector2.new(550, 627), Enum.KeyCode.LeftShift) 
+
+local Test = Window:CreateTab("main")
+local Test2 = Test:CreateSector("farm tab","left")
+local hi = Window:CreateTab("TEST")
+local he = hi:CreateSector("TEST","left")
+
+he:AddDropdown("select boss",{"1", "2", "3", "4", "5", "6","7","8", "9","10"},false,function(choice)
+local farm = choise
+    end)
+
+
+
+
+Test2:AddToggle("auto wins[for ugc too!]",false,function(state)
+getgenv().autofarme = state
+while getgenv().autofarme do
+wait(0.05)
+local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PushEvent"):FireServer(unpack(args))
+
+end
+end)
+
+
+
+Test2:AddToggle("auto training",false,function(state)
+getgenv().training = state
+while getgenv().training do
+wait(0.05)
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DamageIncreaseOnClickEvent"):FireServer()
+
+end
+end)
+
+Test2:AddButton("copy discord",function()
+setclipboard("https://discord.gg/seeVXSzH")
+end)
