@@ -5,7 +5,7 @@ end
 -- test
 _G.autofarms = false;
 getgenv().Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RTrade/Voidz/main/API/Networks/swordhook-network.lua"))() --you can go into the github link and copy all of it and modify it for yourself.
-getgenv().Window = getgenv().Library:CreateWindow('Palm Slap Friends Simulator', Vector2.new(550, 627), Enum.KeyCode.LeftShift) 
+getgenv().Window = getgenv().Library:CreateWindow('Limited Jumps', Vector2.new(550, 627), Enum.KeyCode.LeftShift) 
 
 local Test = Window:CreateTab("main")
 local Test2 = Test:CreateSector("farm tab","left")
