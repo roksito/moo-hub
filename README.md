@@ -107,5 +107,5 @@ end
 end)
 
 Test2:AddButton("copy discord",function()
-setclipboard("https://discord.gg/seeVXSzH")
+setclipboard("https://discord.gg/sDJyW37VYv")
 end)
