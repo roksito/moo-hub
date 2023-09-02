@@ -358,9 +358,6 @@ wait()
 end
 end)
 
-if Client.Input.Keybinds.R4.Value == ";" then
-    game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer("Input", "Semicolon", "R4")
-end
 
 
 if Client.Input.Keybinds.R4.Value == ";" then
