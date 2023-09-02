@@ -31,30 +31,16 @@ local function press(a)
     game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
 end
 local function import(s)
-    return loadstring(game:HttpGet( ("https://raw.githubusercontent.com/stavratum/lua/main/%s.lua"):format(s) ))()
+    return loadstring(game:HttpGet( ("https://raw.githubusercontent.com/roksito/moo-hub/main/%s.lua"):format(s) ))()
 end
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import("fnb/hooks")
-local Connections = import("Connections")
-local Util = import("fnb/util")
+import("file/hooks")
+local Connections = import("file/Connections")
+local Util = import("file/util")
 _G.IsAnimeFan = false;
 _G.FireDirectly = false;
 
