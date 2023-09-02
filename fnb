@@ -27,89 +27,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local function press(a)
     game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
 end
@@ -117,14 +34,29 @@ local function import(s)
     return loadstring(game:HttpGet( ("https://raw.githubusercontent.com/stavratum/lua/main/%s.lua"):format(s) ))()
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import("fnb/hooks")
 local Connections = import("Connections")
 local Util = import("fnb/util")
 _G.IsAnimeFan = false;
 _G.FireDirectly = false;
-
-
-
 
 
 
@@ -147,8 +79,6 @@ local Chances = {
     Bad = 0,
     Miss = 0
 }
-
-
 
 
 
@@ -406,7 +336,45 @@ end)
 Test2:AddToggle("Fire Signals Directly",false,function(state)
 getgenv().FireDirectly = state
 end)
+Test2:AddButton("instant solo",function()  
+ game:GetService("Players").LocalPlayer.PlayerGui.SingleplayerUI.ButtonPressed:FireServer()
 
+end)
+
+Test2:AddButton("reedem all code",function()  
+local str = [[
+dsfgh7sdgfbhn423ynhu
+GAMEOVER
+ANNIVERSARY
+HOGSWEEP
+INDIECROSS
+THANKSMARIO
+HOLIDAY
+SUBTOANDRENICHOLAS
+MERRYCHRISTMAS
+IFOUNDYOUFAKER
+OMGCODES
+LAWSUIT
+THXBOOSTERS
+OMG2V2
+BLOXXINISINNOCENT
+SONIC
+NOMOREDRAMAPLSTHX
+SUBTOCAPTAINJACK
+MODIFIERS
+1M
+]]
+local Codes = string.split(str, "\n")
+
+for i = 1, #Codes do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes"):InvokeServer(Codes[i])
+wait()
+end
+end)
+
+if Client.Input.Keybinds.R4.Value == ";" then
+    game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer("Input", "Semicolon", "R4")
+end
 
 
 if Client.Input.Keybinds.R4.Value == ";" then
