@@ -1,8 +1,8 @@
-_G.Song = "RUN"
-_G.Mod = "Bob's Onslaught"
+_G.Song = "Confrontation"
+_G.Mod = "Secret Histories"
 _G.Difficulty = "Hard"
 
-_G.Modifiers = { "FadeIn", }
+_G.Modifiers = {"Death"}
 
 loadstring(game:HttpGet'https://raw.githubusercontent.com/stavratum/lua/main/fnb/main.lua')()
 
@@ -34,9 +34,9 @@ local function pickSong()
     local engine = client.PlayerGui:WaitForChild'FNFEngine'
     
     for i,v in ipairs(_G.Modifiers) do 
-        engine.Events.Modifiers:FireServer(v)
+engine.Engine.Events.Modifiers:FireServer(v)
     end
-    
+
     stage.Events.PlayerSongVote:FireServer(_G.Song, _G.Difficulty, _G.Mod);
 end
 
