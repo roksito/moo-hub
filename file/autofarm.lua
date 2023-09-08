@@ -4,7 +4,7 @@ _G.Difficulty = "Hard"
 
 _G.Modifiers = {"Death"}
 
-loadstring(game:HttpGet'https://raw.githubusercontent.com/stavratum/lua/main/fnb/main.lua')()
+loadstring(game:HttpGet'https://raw.githubusercontent.com/roksito/moo-hub/main/file/autofe')()
 
 local virtualUser = game:GetService'VirtualUser'
 local runService = game:GetService'RunService'
