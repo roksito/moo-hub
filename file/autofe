@@ -303,7 +303,7 @@ local Test3 = Test:CreateSector("Config","Right")
 Test3:AddSlider("Miss", 0,0,100,1,function(v)
 Chances.Miss = v
 end)
-Test3:AddSlider("Marvelous", 100,0,100,1,function(v)
+Test3:AddSlider("Marvelous", 0,100,100,1,function(v)
 Chances.Marvelous  = v
 end)
 Test3:AddSlider("Sick", 0,0,100,1,function(v)
